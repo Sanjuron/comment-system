@@ -12,3 +12,12 @@ input,textarea {
     display: flex;
     justify-content: space-around;
   }
+
+  input, textarea {
+    margin : 10px;
+    width: 100%;
+  }
+
+  textarea {
+    height: 100px;
+  }

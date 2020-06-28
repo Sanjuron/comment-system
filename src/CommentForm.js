@@ -29,7 +29,7 @@ class CommentForm extends Component {
                 <input type="text" name="name" id="name" placeholder="Input" required onChange={this.handleChange}/>
                 <label htmlFor="message">Message</label>
                 <textarea type="text" name="message" id="message" placeholder="Textarea" required onChange={this.handleChange}/>
-                <button className="button">Envoyer</button>
+                <button className="button is-primary">Envoyer</button>
                 </form>
                 
             </div>
