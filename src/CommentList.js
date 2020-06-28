@@ -9,10 +9,12 @@ class CommentList extends Component {
         })
 
         return (
-
+            <div className="comment-list">
+                <h2>Liste des Commentaires ({commentsList.length})</h2>
             <ul className="comment-list">
                 {commentsList}
             </ul>
+            </div>
          );
     }
 }

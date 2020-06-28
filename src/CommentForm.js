@@ -5,36 +5,31 @@ import { v4 as uuidv4 } from 'uuid';
 
 class CommentForm extends Component {
     state = { 
-        comments: [{}],
+        name: null,
+        message: null,
      };
 
-
-     addComment = (name, message) => {
-        let newComment = {
-          id: uuidv4(),
-          name: name,
-          message: message
-        }
+     handleChange = e => {
         this.setState({
-          comments: [...this.state.comments, newComment]
-        })
+            [e.target.id]: e.target.value // setState permet de modifier le state
+       })
       }
 
       handleSubmit = e => {
         e.preventDefault();
-        console.log(e);
         this.props.addComment(this.state);
       }
 
     render() { 
         return (
-            <div>
-                <form action="">
+            <div className="add-comment">
+                <h2>Ajouter un commentaire</h2>
+                <form action="" onSubmit={this.handleSubmit}>
                 <label htmlFor="name">Name</label>
                 <input type="text" name="name" id="name" placeholder="Input" required onChange={this.handleChange}/>
                 <label htmlFor="message">Message</label>
                 <textarea type="text" name="message" id="message" placeholder="Textarea" required onChange={this.handleChange}/>
-                <button>Envoyer</button>
+                <button className="button">Envoyer</button>
                 </form>
                 
             </div>

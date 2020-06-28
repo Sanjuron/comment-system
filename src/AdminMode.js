@@ -21,7 +21,7 @@ class AdminMode extends Component {
        
         return (         
         <article className={classMessage}>
-            <div className="message-body">
+            <div className="message-body ">
                 {button}
             </div>
         </article>
