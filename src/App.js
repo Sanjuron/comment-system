@@ -41,7 +41,7 @@ class App extends Component {
         <AdminMode deleteComment={this.deleteComment}/>
         <div className="flex">
         <CommentForm addComment={this.addComment}/>
-        <CommentList comments={this.state.comments} />
+        <CommentList comments={this.state.comments} deleteComment={this.deleteComment} />
         </div>
       </div>
      );

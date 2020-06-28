@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class CommentList extends Component {
-    state = {  }
-    render() { 
-        
-        let commentsList = this.props.comments.map(comment => {
-            return <li>{comment.name}: {comment.message}</li>
+
+        const CommentList = ({comments, deleteComment}) => {
+        const commentsList = comments.map(comment => {
+            return <div> 
+                    <li>{comment.name}: {comment.message}</li>
+                    <button className="delete" onClick={() => {deleteComment(comment.id)}}>X</button>
+            </div>
         })
+    
 
         return (
             <div className="comment-list">
@@ -17,6 +19,6 @@ class CommentList extends Component {
             </div>
          );
     }
-}
+
  
 export default CommentList;
